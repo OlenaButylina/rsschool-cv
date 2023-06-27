@@ -29,3 +29,14 @@ kovalch-elena@ukr.net
 Контроль строків ремонту;
 Внесення інформаціі по ремонтам в CRM системи конрагентів;
 Отримання компенсаціі за виконані ремонти від контрагентів.
+
+
+Сode example
+ if (update.getCallbackQuery().getData().equals("Level_4_task") && getLevel(chatId) ==4) {
+                setLevel(chatId, 5);
+                sendImage("final", chatId);
+                SendMessage message = createMessage("*Джавелін твій. Повний вперед!*");
+                message.setChatId(chatId);
+                sendApiMethodAsync(message);
+
+            }
